@@ -1,19 +1,30 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Text:</strong>
-  <%= @efimerida.text %>
-</p>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>detalle del articulo </h1>
+			<div class="card">
+				<h5 class="card-header">Mostrar datos </h5>
+				<div class="card-body">
+					<h5 class="card-title">Datos</h5>
+					<p class="card-text">
+						<strong>Text:</strong>
+						<%= @efimerida.text %>
+					</p>
+					<p>
+						<strong>Date:</strong>
+						<%= @efimerida.date %>
+					</p>
+					<p>
+						<strong>Category:</strong>
+						<%= @efimerida.category_name %>
+					</p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @efimerida.date %>
-</p>
+					<%= link_to 'Edit', edit_efimerida_path(@efimerida) , class: 'btn btn-primary' %> |
+					<%= link_to 'Back', efimeridas_path , class: 'btn btn-primary' %>
 
-<p>
-  <strong>Category:</strong>
-  <%= @efimerida.category %>
-</p>
-
-<%= link_to 'Edit', edit_efimerida_path(@efimerida) %> |
-<%= link_to 'Back', efimeridas_path %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
