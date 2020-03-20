@@ -1,31 +1,36 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <p id="notice"><%= notice %></p>
 
-<h1>Efimeridas</h1>
+      <h1>Efimeridas</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Text</th>
-      <th>Date</th>
-      <th>Category</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @efimeridas.each do |efimerida| %>
-      <tr>
-        <td><%= efimerida.text %></td>
-        <td><%= efimerida.date %></td>
-        <td><%= efimerida.category_name %></td>
-        <td><%= link_to 'Show', efimerida %></td>
-        <td><%= link_to 'Edit', edit_efimerida_path(efimerida) %></td>
-        <td><%= link_to 'Destroy', efimerida, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Efimerida', new_efimerida_path %>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+           <th scope="col">id</th>
+           <th scope="col">Text</th>
+           <th scope="col">Date</th>
+           <th scope="col">Category</th>
+           <th colspan="3"></th>
+         </tr>
+       </thead>
+       <tbody>
+        <% @efimeridas.each do |efimerida| %>
+        <tr>
+          <td><%= efimerida.id %></td>
+          <td><%= efimerida.text %></td>
+          <td><%= efimerida.date %></td>
+          <td><%= efimerida.category_name %></td>
+          <td><%= link_to 'Show', efimerida %></td>
+          <td><%= link_to 'Edit', edit_efimerida_path(efimerida) %></td>
+          <td><%= link_to 'Destroy', efimerida, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <br>
+    <%= link_to 'New Efimerida', new_efimerida_path, class: 'btn btn-primary'%>
+  </div>
+</div>
+</div>

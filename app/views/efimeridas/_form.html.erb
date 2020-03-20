@@ -11,22 +11,26 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :text %>
-    <%= form.text_field :text %>
+    <%= form.text_field :text, class: 'form-control'%>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :date %>
-    <%= form.date_select :date %>
+    <%= form.date_select :date, { :prompt => {day: 'Day', month: 'Month', year: 'Year'}}, class: 'form-control date-select col-md-4'  %>
+
   </div>
 
-  <div class="field">
+
+
+
+  <div class="form-group">
     <%= form.label :efimerida %>
-    <%= select("efimerida", "category_id", Category.all.collect {|p| [ p.name, p.id ] }, {prompt: 'Seleccione la categoria', selected: '', disabled: ''})%>
+    <%= select("efimerida", "category_id", Category.all.collect {|p| [ p.name, p.id ] }, {prompt: 'Seleccione la categoria', selected: '', disabled: ''}, class: "form-control")%>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'crear efimerida', class: 'btn btn-primary' %>
   </div>
 <% end %>
