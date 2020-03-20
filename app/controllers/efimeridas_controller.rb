@@ -70,6 +70,6 @@ class EfimeridasController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def efimerida_params
-    params.require(:efimerida).permit(:text, :date, :category_id)
+    params.require(:efimerida).permit(:text, :date, :category_id, :attachment)
   end
 end

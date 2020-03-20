@@ -12,6 +12,7 @@
            <th scope="col">Text</th>
            <th scope="col">Date</th>
            <th scope="col">Category</th>
+           <th scope="col">image</th>
            <th colspan="3"></th>
          </tr>
        </thead>
@@ -22,6 +23,7 @@
           <td><%= efimerida.text %></td>
           <td><%= efimerida.date %></td>
           <td><%= efimerida.category_name %></td>
+          <td><%= efimerida.attachment %></td>
           <td><%= link_to 'Show', efimerida %></td>
           <td><%= link_to 'Edit', edit_efimerida_path(efimerida) %></td>
           <td><%= link_to 'Destroy', efimerida, method: :delete, data: { confirm: 'Are you sure?' } %></td>
