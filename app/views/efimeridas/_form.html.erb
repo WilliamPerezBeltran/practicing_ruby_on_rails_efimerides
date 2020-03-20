@@ -26,6 +26,10 @@
     <%= form.text_field :category_id %>
   </div>
 
+  <div class="field">
+    <%= select("efimeride", "category_id", Category.all.collect {|p| [ p.name, p.id ] }, {prompt: 'Seleccione la categoria', selected: '', disabled: ''})%>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
