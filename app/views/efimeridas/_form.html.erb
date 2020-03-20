@@ -30,6 +30,15 @@
     <%= select("efimerida", "category_id", Category.all.collect {|p| [ p.name, p.id ] }, {prompt: 'Seleccione la categoria', selected: '', disabled: ''}, class: "form-control")%>
   </div>
 
+
+  <div class="form-group">
+    <%= form.label :imagen %>
+    <%= form.file_field :attachment %>
+    
+  </div>
+
+
+
   <div class="actions">
     <%= form.submit 'crear efimerida', class: 'btn btn-primary' %>
   </div>
