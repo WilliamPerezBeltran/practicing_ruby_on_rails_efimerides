@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @efimerida.text %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @efimerida.date %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @efimerida.category %>
+</p>
+
+<%= link_to 'Edit', edit_efimerida_path(@efimerida) %> |
+<%= link_to 'Back', efimeridas_path %>
